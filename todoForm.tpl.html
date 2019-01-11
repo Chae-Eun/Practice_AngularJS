@@ -1,0 +1,12 @@
+<form name="todoForm" ng-submit="add(newTodoTitle)" accept-charset="utf-8">
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="newTodoTitle" placeholder="Enter new Todo!" minlength="3">
+    <div class="input-group-append">
+      <button class="btn btn-success" type="submit">Add</button>
+    </div>
+  </div>
+  
+  <div ng-show="todoForm.$dirty && todoForm.$invalid">
+    <div class="alert alert-warning">Enter three words or more!</div>
+  </div>
+</form>
